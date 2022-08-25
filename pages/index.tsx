@@ -1,12 +1,10 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import HomeHero from '../components/sections/home_hero'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-blue-500'>
-      hello world
+    <div className=''>
+      <HomeHero />
     </div>
   )
 }
