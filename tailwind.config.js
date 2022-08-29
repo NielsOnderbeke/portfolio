@@ -18,6 +18,11 @@ module.exports = {
           '50%': { transform: 'translateX(15%) translateY(-10%) rotateZ(5deg)' },
           '75%': { transform: 'translateX(5%) translateY(-15%) rotateZ(10deg)' },
           '100%': { transform: 'translateX(0%) translateY(-5%) rotateZ(-15deg)' },
+        },
+        "typing":{
+          "0%": { width: "0%" },
+          "90%": { width: "100%", borderColor:  "white"},
+          "100%": { borderColor: "transparent" }
         }
       },
       animation: {
@@ -25,10 +30,12 @@ module.exports = {
         'fly-slow': 'fly 6s linear infinite',
         'fly-medium': 'fly 4s linear infinite',
         'fly-reverse-slow': 'fly-reverse 6s linear infinite',
-        'fly-reverse-medium': 'fly-reverse 4s linear infinite'
+        'fly-reverse-medium': 'fly-reverse 4s linear infinite',
+        'typing': 'typing 1s steps(20, end) forwards'
       },
       fontFamily: {
-        prompt: "Prompt"
+        prompt: "Prompt",
+        slickscreen: 'Silkscreen, cursive'
       }
     },
   },

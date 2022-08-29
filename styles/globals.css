@@ -6,4 +6,8 @@
    .pause-animation {
      animation-play-state: paused;
    }
+
+   .text-shadow-black {
+    text-shadow: 2px 2px black;
+   }
 }

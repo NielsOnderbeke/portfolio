@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 
   return (
     <div onMouseMove={(event) => setMousePosition((previous) => ({ ...previous, x: event.pageX, y: event.pageY }))} className="cursor-none">
-      <div style={{ top: mousePosition.y, left: mousePosition.x }} className="w-8 h-8 rounded-full absolute animate-spin-slow z-[999]"><Cog8ToothIcon className='text-teal-500' /></div>
+      <div style={{ top: mousePosition.y, left: mousePosition.x }} className="hidden lg:block w-8 h-8 rounded-full absolute animate-spin-slow z-[999]"><Cog8ToothIcon className='text-white' /></div>
       <HomeHero />
     </div>
   )
