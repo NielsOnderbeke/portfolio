@@ -24,11 +24,11 @@ const HomeHero: NextComponentType<NextPageContext, {}, Props> = (
               <h2 className="text-sm lg:text-2xl lg:group-hover:translate-x-12 transition-all duration-200 animate-typing overflow-hidden border-r-2 border-solid border-white whitespace-nowrap">Full Stack Web Dev</h2>
             </div>
           </div>
-          <img className="w-24 absolute -top-16 -left-6 -rotate-6" src="/img/svg/nodeSticker.svg" alt="" />
-          <img className="w-24 absolute -bottom-24 -left-6 rotate-6" src="/img/svg/nextSticker.svg" alt="" />
-          <img className="w-20 absolute -bottom-24 -right-6" src="/img/svg/sassSticker.svg" alt="" />
-          <img className="w-10 absolute -bottom-28 left-32 -" src="/img/svg/tailwindSticker.svg" alt="" />
-          <img className="w-20 absolute -top-16 -right-2" src="/img/svg/nestSticker.svg" alt="" />
+          <img className="w-24 absolute -top-16 -left-6 -rotate-6" src="/img/svg/nodeSticker.svg" alt="node js logo" />
+          <img className="w-24 absolute -bottom-24 -left-6 rotate-6" src="/img/svg/nextSticker.svg" alt="next js logo" />
+          <img className="w-20 absolute -bottom-24 -right-6" src="/img/svg/sassSticker.svg" alt="sass logo" />
+          <img className="w-10 absolute -bottom-28 left-32 -" src="/img/svg/tailwindSticker.svg" alt="tailwindcss logo" />
+          <img className="w-20 absolute -top-16 -right-2" src="/img/svg/nestSticker.svg" alt="nest js logo" />
         </div>
       </main>
     </section>
