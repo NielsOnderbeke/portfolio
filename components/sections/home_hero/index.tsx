@@ -2,18 +2,33 @@
 import type { NextComponentType, NextPageContext } from "next";
 import Image from "next/image";
 import HeaderLink from "./components/header-link";
-import { Bars2Icon } from '@heroicons/react/24/solid'
+import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { useState } from "react"
 
 interface Props { }
 
 const HomeHero: NextComponentType<NextPageContext, {}, Props> = (
   props: Props,
 ) => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
+
+
   return (
     <section className="bg-gradient-to-b from-teal-900 via-teal-700 to-teal-400">
       <header className="lg:shadow-sm font-mono shadow-teal-800 grid items-center md:justify-center p-4 h-16 text-white">
-        <Bars2Icon className="text-white w-6 justify-self-end md:hidden" />
+        <Bars2Icon className="text-white w-8 justify-self-end md:hidden" onClick={() => setShowMobileMenu(true)} />
         <nav className="hidden md:block" ><ul className="grid grid-flow-col gap-12"><HeaderLink title="Projects" href="#projects" /><HeaderLink title="Job" href="#job" /><HeaderLink title="Learning rader" href="#learning-radar" /><HeaderLink title="Blog" href="#blog" /><HeaderLink title="Contact" href="#contact" /></ul></nav>
+      </header>
+      <header className={`fixed top-0 left-12 bottom-0 right-0 z-50 bg-gray-700/20 font-mono shadow-md shadow-teal-900 backdrop-blur-xl transition-transform duration-300 ease-out ${showMobileMenu ? "translate-x-0" : "translate-x-full"}`}>
+        <div className="flex justify-between items-center text-white p-6">
+          <h1 className="text-2xl">Navigate</h1>
+          <XMarkIcon className="w-8" onClick={() => setShowMobileMenu(false)} />
+        </div>
+        <nav>
+          <ul className="grid gap-10 p-6 text-white text-lg" onClick={() => setShowMobileMenu(false)}>
+            <HeaderLink title="Projects" href="#projects" /><HeaderLink title="Job" href="#job" /><HeaderLink title="Learning rader" href="#learning-radar" /><HeaderLink title="Blog" href="#blog" /><HeaderLink title="Contact" href="#contact" />
+          </ul>
+        </nav>
       </header>
       <main className="h-[calc(75vh-4rem)] md:h-[calc(100vh-4rem)] grid place-items-center overflow-hidden">
         <div className="relative p-4 lg:p-20 group">
