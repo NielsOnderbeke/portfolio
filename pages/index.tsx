@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import HomeHero from '../components/sections/home_hero'
+import Projects from '../components/sections/projects'
 
 const Home: NextPage = () => {
 
@@ -8,9 +9,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <HomeHero />
-      <div className='h-screen'>
-        bla bla
-      </div>
+      <Projects />
     </div>
   )
 }
